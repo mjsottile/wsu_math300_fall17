@@ -1,0 +1,118 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+
+%%
+%% common packages for math from the AMS
+%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+%%
+%% defining environments for some common math parts
+%%
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+
+\begin{theorem}[First derivative test for a local extremum]
+Let $p$ be a critical point of $f$, and suppose $f'$ changes sign in going through $p$.   Then $f$ has a strict local extremum at $p$.  The extremum is a maximum if $f'$ changes sign from plus to minus, and a minimum if $f'$ changes sign from minus to plus.
+\end{theorem}
+
+\begin{proof}
+
+Suppose $f'$ changes sign from plus to minus in going through 
+$p$, in a deleted $\delta$-neighborhood of $p$, that is, in the 
+union of intervals $(p-\delta, p) \cup (p, p+\delta)$.
+By the mean value theorem in increment form,
+
+\[ f(p + \Delta x) - f(p) = f'(p + \alpha \Delta x) \Delta x \quad (0 < \alpha < 1). \]
+
+\noindent Therefore
+
+\begin{equation}
+\label{eq:1}
+f(p + \Delta x) - f(p) < 0
+\end{equation}
+
+\noindent if $-\delta < \Delta x < 0$, since then $f'(p + \alpha \Delta x) > 0$, $\Delta x < 0$, and similarly
+
+\begin{equation}
+\label{eq:2}
+f(p + \Delta x) - f(p) < 0
+\end{equation}
+
+\noindent if $0 < \Delta x < \delta$, since then $f'(p + \alpha \Delta x) < 0$, $\Delta x > 0$.  In other words,
+
+\begin{equation}
+\label{eq:3}
+f(p + \Delta x) < f(p)
+\end{equation}
+
+\noindent if $0 < |\Delta x| < \delta$, so that $f$ has a strict local maximum
+at $p$.  On the other hnad, if $f'$ changes sign from minus to plus in
+going through $p$, then we get $>$ instead of $<$ in (\ref{eq:1}),
+(\ref{eq:2}), and (\ref{eq:3}), so that $f$ has a strict local minimum
+at $p$ (check the details).
+
+\end{proof}
+
+\newpage
+
+\noindent \textbf{Euler's formula:}
+
+\[ e^{iz} = \cos z + i \sin z \quad \mbox{ and } \quad e^{-iz} = \cos z - i \sin z \]
+
+\newpage
+
+\noindent Complex $n^{th}$ root of unity:
+
+\[ \omega \in \mathbb{C} \mbox{ such that } \omega^n = 1 \]
+
+\noindent There are exactly $n$ complex $n^{th}$ roots of unity:
+
+\[ e^{2 \pi i \frac{k}{n}} \quad k=0,1, \cdots, n-1 \] 
+
+\noindent Recall:
+
+\[ e^{i u} = \cos(u) + i \sin(u) \]
+
+\newpage
+
+\noindent Integrals:
+
+\begin{equation}
+\int_1^{Z} \frac{1}{z} \, dz = \log Z
+\end{equation}
+
+\noindent Limits.  Let $y = f(x)$.  Since $f$ is differentiable
+at $x$ and $g$ is differentable at $y = f(x)$, both limits:
+
+\begin{eqnarray*}
+f'(x) & = & \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}, \\
+g'(x) & = & \lim_{\Delta y \to 0} \frac{g(y + \Delta y) - g(y)}{\Delta y}
+\end{eqnarray*}
+
+\noindent exist, but then
+
+\begin{eqnarray*}
+\lim_{\Delta x \to 0} \left[ \frac{f(x + \Delta x) - f(x)}{\Delta x} - f'(x) \right] & = & 0 \\
+\lim_{\Delta y \to 0} \left[ \frac{g(y + \Delta y) - g(y)}{\Delta y} - g'(y) \right] & = & 0 \\
+\end{eqnarray*}
+
+\newpage
+
+\noindent Sets:
+
+\[ \mathcal{X} = \bigcap_{s_i \in \mathcal{S}} s_i \]
+
+\noindent Sums:
+
+\[ \sum_{i=1}^{N} i^2 \]
+
+\noindent The sum $\sum_{i=1}^{N} i^2$ is big.
+
+\end{document}
